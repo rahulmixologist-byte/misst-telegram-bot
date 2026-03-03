@@ -1,0 +1,19 @@
+import os
+import telebot
+from openai import OpenAI
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+bot = telebot.TeleBot(BOT_TOKEN)
+client = OpenAI(api_key=OPENAI_API_KEY)
+
+@bot.message_handler(func=lambda message: True)
+def reply(message):
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": message.text}]
+    )
+    bot.reply_to(message, response.choices[0].message.content)
+
+bot.polling()
