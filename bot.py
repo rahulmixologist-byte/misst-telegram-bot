@@ -33,3 +33,6 @@ def auto_reply(message):
         bot.send_photo(message.chat.id, photo, caption=AUTO_MESSAGE)
 
 bot.polling(non_stop=True)
+@bot.message_handler(commands=['gid'])
+def get_group_id(message):
+    bot.reply_to(message, str(message.chat.id))
