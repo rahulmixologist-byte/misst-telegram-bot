@@ -29,6 +29,7 @@ AUTO_MESSAGE = """
 
 @bot.message_handler(func=lambda message: True)
 def auto_reply(message):
-    bot.reply_to(message, AUTO_MESSAGE)
+    with open("photo.jpg", "rb") as photo:
+        bot.send_photo(message.chat.id, photo, caption=AUTO_MESSAGE)
 
-bot.polling()
+bot.polling(non_stop=True)
