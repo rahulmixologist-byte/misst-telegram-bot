@@ -10,20 +10,20 @@ AUTO_MESSAGE = """
 2️⃣ I am Misstress  
 3️⃣ Submissive will allow to contact me  
 
-✳️ Paid Session Available  
-❇️ Demo charge 77/- (1 minute)  
+✳️ Paid Session available  
+❇️ Demo charge 77/- 1 minute  
 
-✅ Chat session – 99/- (8 minutes)  
-✅ Voice call – 199/- (5 minutes)  
-✅ Video call – 470/- (10 minutes)  
+✅ Chat session 99/- 8 minutes  
+✅ Voice call 199/- 5 minutes  
+✅ Video call 470/- 10 minutes  
 
 ✳️ Offer price for video call session  
-✅ 199/- (5 minutes)  
+✅ 199/- 5 minutes  
 
-✳️ Feet pic sell – 70/- (2 pics)  
-✳️ Feet video sell – 200/- (1 minute)  
+✳️ Feet pic sell 70/- two pics  
+✳️ Feet video sell 200/- 1 minute  
 
-🛑 Non-paid slave not allowed  
+🛑 Non paid slave not allowed  
 ❌ No real meet
 """
 
@@ -31,4 +31,4 @@ AUTO_MESSAGE = """
 def auto_reply(message):
     bot.reply_to(message, AUTO_MESSAGE)
 
-bot.polling(non_stop=True, interval=0, timeout=20)
+bot.polling()
