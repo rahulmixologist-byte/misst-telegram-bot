@@ -31,4 +31,4 @@ AUTO_MESSAGE = """
 def auto_reply(message):
     bot.reply_to(message, AUTO_MESSAGE)
 
-bot.polling()
+bot.polling(non_stop=True, interval=0, timeout=20)
